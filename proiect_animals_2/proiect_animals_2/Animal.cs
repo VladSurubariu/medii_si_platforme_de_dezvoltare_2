@@ -11,9 +11,13 @@ namespace proiect_animals_2
         protected string name;
         protected string sound;
 
-        protected Animal(string name, string sound)
+        protected void setName<T>() where T : Animal
         {
-            this.name = name;
+            name = typeof(T).Name;
+        }
+
+        protected void setSound(string sound)
+        {
             this.sound = sound;
         }
 
