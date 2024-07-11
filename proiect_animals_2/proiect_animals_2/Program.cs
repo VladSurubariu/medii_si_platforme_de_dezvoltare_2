@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 
 List<Animal> animals = new List<Animal>
-        {
-            new Cat("Cat", "meow"),
-            new Dog("Dog", "bark"),
-            new Cow("Cow", "moooo")
-        };
+{
+    new Cat(),
+    new Dog(),
+    new Cow()
+};
 
-// Iterate over the list and call the Speak method
 foreach (Animal animal in animals)
 {
     animal.makesSound();

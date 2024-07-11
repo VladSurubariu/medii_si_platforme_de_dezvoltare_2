@@ -8,8 +8,10 @@ namespace proiect_animals_2
 {
     public class Cat : Animal
     {
-        public Cat(string name, string sound) : base(name, sound)
+        public Cat()
         {
+            setName<Cat>();
+            setSound("meow");
         }
     }
 }
