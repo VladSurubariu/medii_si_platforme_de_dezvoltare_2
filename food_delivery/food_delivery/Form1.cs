@@ -33,8 +33,8 @@ namespace food_delivery
 
             restaurant.foodIsOrderedNotification();
 
-            restaurant.getNotificationService().removeListeners(EVENT_TYPE.Type.FOOD_ORDERED, new CookListener("3"));
-            restaurant.getNotificationService().removeListeners(EVENT_TYPE.Type.FOOD_ORDERED, new ClientListener("9"));
+            restaurant.getNotificationService().removeListeners(EVENT_TYPE.Type.FOOD_ORDERED);
+            restaurant.getNotificationService().removeListeners(EVENT_TYPE.Type.FOOD_ORDERED);
 
         }
 

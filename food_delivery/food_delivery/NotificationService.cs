@@ -8,7 +8,7 @@ namespace food_delivery
 {
     public class NotificationService
     {
-        Dictionary<EVENT_TYPE.Type, List<Listener>> customers;
+        public Dictionary<EVENT_TYPE.Type, List<Listener>> customers;
 
         public NotificationService()
         {
@@ -28,11 +28,11 @@ namespace food_delivery
             customers[event_type].Add(listener);
         }
 
-        public void removeListeners(EVENT_TYPE.Type event_type, Listener listener) 
+        public void removeListeners(EVENT_TYPE.Type event_type)
         {
             if (customers.ContainsKey(event_type))
             {
-                customers[event_type].Remove(listener);
+                customers[event_type].Clear();
             }
             
         }

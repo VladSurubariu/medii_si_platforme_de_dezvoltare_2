@@ -16,8 +16,6 @@ namespace food_delivery
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            Restaurant restaurant = new Restaurant();
-
         }
     }
 }
