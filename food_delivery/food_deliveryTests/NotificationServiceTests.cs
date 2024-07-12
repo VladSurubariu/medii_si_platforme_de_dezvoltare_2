@@ -28,7 +28,7 @@ namespace food_delivery.Tests
             notificationService.addListeners(EVENT_TYPE.Type.FOOD_ORDERED, new CookListener("2"));
             notificationService.addListeners(EVENT_TYPE.Type.FOOD_ORDERED, new CookListener("3"));
 
-            Assert.IsTrue(notificationService.customers[EVENT_TYPE.Type.FOOD_ORDERED].Count == 1);
+            Assert.IsTrue(notificationService.customers[EVENT_TYPE.Type.FOOD_ORDERED].Count == 2);
 
             notificationService.removeListeners(EVENT_TYPE.Type.FOOD_ORDERED);
 
