@@ -8,20 +8,27 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'  # sau 7.0.x/6.0.x dacă proiectul tău folosește altă versiune
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
 
-    - name: Change directory
-      working-directory: ./food_delivery
-      run:
-        dotnet
-        dotnet build --no-restore --configuration Release
-        dotnet test --no-build --configuration Release --verbosity normal
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1
+
+      - name: Restore NuGet packages
+        run: nuget restore RestaurantManager\RestaurantManager.sln
+
+      - name: Build solution
+        run: msbuild RestaurantManager\RestaurantManager.sln /p:Configuration=Release
+
+      - name: Change directory
+        working-directory: ./food_delivery
+        run:
+          dotnet
+          dotnet build --no-restore --configuration Release
+          dotnet test --no-build --configuration Release --verbosity normal
