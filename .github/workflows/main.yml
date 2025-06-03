@@ -23,6 +23,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Restore NuGet packages
+        run: nuget restore food_delivery\food_delivery.sln
+
       - name: Build solution
         run: msbuild food_delivery\food_delivery.sln /p:Configuration=Release
 
