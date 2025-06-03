@@ -30,7 +30,5 @@ jobs:
         run: msbuild food_delivery\food_delivery.sln /p:Configuration=Release
 
       - name: Run UT
-        run:
-          dotnet
-          dotnet build --no-restore --configuration Release
-          dotnet test --no-build --configuration Release
+        run: dotnet test food_delivery\food_delivery.sln --no-build --verbosity normal
+
