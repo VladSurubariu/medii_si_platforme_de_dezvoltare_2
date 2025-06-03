@@ -21,10 +21,10 @@ jobs:
         uses: NuGet/setup-nuget@v1
 
       - name: Restore NuGet packages
-        run: nuget restore food_delivery\food_delivery.sln
+        run: nuget restore food_delivery.sln
 
       - name: Build solution
-        run: msbuild food_delivery\food_delivery.sln /p:Configuration=Release
+        run: msbuild food_delivery.sln /p:Configuration=Release
 
       - name: Change directory
         working-directory: ./food_delivery
