@@ -48,6 +48,7 @@ namespace food_delivery
             restaurant.getNotificationService().addListeners(EVENT_TYPE.Type.FOOD_ORDERED, new ClientListener("11"));
 
             restaurant.foodIsOrderedNotification();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
