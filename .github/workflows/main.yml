@@ -30,5 +30,6 @@ jobs:
         run: msbuild food_delivery\food_delivery.sln /p:Configuration=Release
 
       - name: Run UT
-        run: dotnet test food_delivery\food_deliveryTests\food_deliveryTests.csproj --no-build --verbosity normal
+        run: |
+         vstest.console.exe food_delivery\food_deliveryTests\bin\Release\food_deliveryTests.dll
 
