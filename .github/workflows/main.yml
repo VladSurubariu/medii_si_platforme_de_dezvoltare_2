@@ -33,4 +33,4 @@ jobs:
         run:
           dotnet
           dotnet build --no-restore --configuration Release
-          dotnet test --no-build --configuration Release --verbosity normal
+          dotnet test --no-build --configuration Release
