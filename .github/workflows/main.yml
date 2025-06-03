@@ -20,6 +20,9 @@ jobs:
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1
 
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Navigate to food_delivery directory
         run: cd food_delivery
 
