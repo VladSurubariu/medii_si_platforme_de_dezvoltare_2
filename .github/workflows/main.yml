@@ -23,11 +23,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Navigate to food_delivery directory
-        run: cd food_delivery
-
       - name: Build solution
-        run: msbuild food_delivery.sln /p:Configuration=Release
+        run: msbuild food_delivery\food_delivery.sln /p:Configuration=Release
 
       - name: Run UT
         run:
