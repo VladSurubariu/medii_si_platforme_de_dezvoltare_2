@@ -15,3 +15,6 @@ Proiect pentru materia Medii si platforme de dezvoltare, STIA, anul I
 - Project 1 before refactoring is available on commit hash 8fb73d473136e77236e4f660022ecb1e5d0a891c
 - Project 1 after refactoring is available on feature/refactoring
 - Project 2 is available only on latest main branch version
+
+
+## Test
