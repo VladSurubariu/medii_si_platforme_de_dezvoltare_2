@@ -34,5 +34,5 @@ jobs:
 
       - name: Run UT
         run: |
-         vstest.console.exe food_delivery\food_deliveryTests\bin\Release\food_deliveryTests.dll
+         vstest.console.exe food_delivery\food_deliveryTests\bin\Debug\food_deliveryTests.dll
 
